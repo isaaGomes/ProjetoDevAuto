@@ -42,7 +42,7 @@ namespace Tela1_Acesso
         private void btnAdicionarCliente_Click(object sender, EventArgs e)
         {
             MySqlConnection con = new MySqlConnection(conexao);
-            if (txtNomeDoCliente.Text == "" || txtCelular.Text == "" || txtTipoDeServiço.Text == "" || txtTipoDePagamento.Text ==""); ;
+            if (txtNomeDoCliente.Text == "" || txtCelular.Text == "" || txtTipoDeServiço.Text == "" || txtTipoDePagamento.Text == "") ; ;
             {
                 MessageBox.Show("Preencha todos os campos");
                 return;
@@ -65,6 +65,11 @@ namespace Tela1_Acesso
         }
 
         private void lbCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
