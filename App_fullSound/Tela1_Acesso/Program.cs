@@ -12,7 +12,7 @@ namespace Tela1_Acesso
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new TelaCliente());
+            Application.Run(new Orçamentos());
       }
     }
 }

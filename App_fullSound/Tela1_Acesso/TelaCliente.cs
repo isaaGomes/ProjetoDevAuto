@@ -52,7 +52,7 @@ namespace Tela1_Acesso
             string sql =
                 @"INSERT INTO Clientes (Nome, Celular, Tipodeservico, Status, Tipodepagamento)
                   Values (@nome, @celular, @servico, @status, @pagamento)";
-            cmd
+            
             dgvClientes.Rows.Add(txtNomeDoCliente, txtCelular, "Ativo");
             txtNomeDoCliente.Clear();
             txtCelular.Clear();
