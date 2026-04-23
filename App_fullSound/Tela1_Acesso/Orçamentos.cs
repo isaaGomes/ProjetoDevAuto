@@ -65,7 +65,7 @@ namespace Tela1_Acesso
         private void lblHome_Click(object sender, EventArgs e)
         {
 
-            Form1 home = new Form1();
+            FullSound home = new FullSound();
             home.Show();
             this.Hide();
 
@@ -92,7 +92,7 @@ namespace Tela1_Acesso
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            Agenda agenda = new Agenda();
+            FullSound agenda = new FullSound();
             agenda.Show();
             this.Hide();
         }

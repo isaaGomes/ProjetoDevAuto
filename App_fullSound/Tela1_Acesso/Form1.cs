@@ -1,8 +1,8 @@
 namespace Tela1_Acesso
 {
-    public partial class Form1 : Form
+    public partial class FullSound : Form
     {
-        public Form1()
+        public FullSound()
         {
             InitializeComponent();
         }
