@@ -44,10 +44,8 @@ namespace Tela1_Acesso
 
             MySqlConnection con = new MySqlConnection(conexao);
 
-            if (txtNomeDoCliente.Text == "" ||
-                txtCelular.Text == "" ||
-                txtTipoDeServiço.Text == "" ||
-                txtTipoDePagamento.Text == "")
+            
+               
             {
                 MessageBox.Show("Preencha todos os campos");
                 return;
@@ -58,18 +56,16 @@ namespace Tela1_Acesso
                    VALUES 
                    (@nome, @celular, @servico, @status, @pagamento)";
             MySqlCommand cmd = new MySqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("@nome", txtNomeDoCliente.Text);
+            cmd.Parameters.AddWithValue("@nome", txtNome.Text);
             cmd.Parameters.AddWithValue("@celular", txtCelular.Text);
             cmd.Parameters.AddWithValue("@servico", txtTipoDeServiço.Text);
             cmd.Parameters.AddWithValue("@status", "Ativo");
-            cmd.Parameters.AddWithValue("@pagamento", txtTipoDePagamento.Text);
-            cmd.ExecuteNonQuery();
-            con.Close();
+           
             MessageBox.Show("Cliente cadastrado com sucesso!");
-            txtNomeDoCliente.Clear();
+            txtNome.Clear();
             txtCelular.Clear();
             txtTipoDeServiço.Clear();
-            txtTipoDePagamento.Clear();
+           
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -82,6 +78,21 @@ namespace Tela1_Acesso
         }
 
         private void dgvClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LbNomeCliente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
