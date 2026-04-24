@@ -14,7 +14,9 @@ namespace Tela1_Acesso
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
-            Application.Run(new Agenda());
+
+            Application.Run(new Orçamentos());
+
       }
     }
 }

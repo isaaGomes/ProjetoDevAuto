@@ -65,9 +65,7 @@ namespace Tela1_Acesso
         private void lblHome_Click(object sender, EventArgs e)
         {
 
-            FullSound home = new FullSound();
-            home.Show();
-            this.Hide();
+
 
         }
 
@@ -92,9 +90,7 @@ namespace Tela1_Acesso
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            FullSound agenda = new FullSound();
-            agenda.Show();
-            this.Hide();
+
         }
 
         private void label1_MouseClick(object sender, MouseEventArgs e)
@@ -106,6 +102,27 @@ namespace Tela1_Acesso
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+
 }
 

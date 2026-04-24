@@ -28,132 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            lblX = new Label();
-            lblEmissao = new Label();
-            lblFluxo = new Label();
-            lblEmitir = new Label();
-            panel1 = new Panel();
-            panel3 = new Panel();
-            panel5 = new Panel();
-            dataGridView1 = new DataGridView();
-            ColEntrada = new DataGridViewTextBoxColumn();
-            ColSaidas = new DataGridViewTextBoxColumn();
-            ColSaldo = new DataGridViewTextBoxColumn();
-            ColLista = new DataGridViewTextBoxColumn();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orçamentos));
             lblHome = new Label();
             lblCliente = new Label();
             lblOrcamentos = new Label();
             label1 = new Label();
-            panel1.SuspendLayout();
-            panel3.SuspendLayout();
-            panel5.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            label2 = new Label();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            dataGridView1 = new DataGridView();
+            pictureBox15 = new PictureBox();
+            pictureBox16 = new PictureBox();
+            pictureBox17 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
-            // 
-            // lblX
-            // 
-            lblX.AutoSize = true;
-            lblX.BackColor = Color.White;
-            lblX.Cursor = Cursors.Hand;
-            lblX.Location = new Point(8, 6);
-            lblX.Name = "lblX";
-            lblX.Size = new Size(14, 15);
-            lblX.TabIndex = 0;
-            lblX.Text = "X";
-            // 
-            // lblEmissao
-            // 
-            lblEmissao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEmissao.ForeColor = SystemColors.ButtonHighlight;
-            lblEmissao.Location = new Point(6, 15);
-            lblEmissao.Name = "lblEmissao";
-            lblEmissao.Size = new Size(252, 23);
-            lblEmissao.TabIndex = 0;
-            lblEmissao.Text = "Emissão de comprovante";
-            // 
-            // lblFluxo
-            // 
-            lblFluxo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblFluxo.ForeColor = SystemColors.ButtonHighlight;
-            lblFluxo.Location = new Point(4, 12);
-            lblFluxo.Name = "lblFluxo";
-            lblFluxo.Size = new Size(287, 23);
-            lblFluxo.TabIndex = 0;
-            lblFluxo.Text = "Entrada de fluxo de caixa";
-            // 
-            // lblEmitir
-            // 
-            lblEmitir.AutoSize = true;
-            lblEmitir.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEmitir.ForeColor = SystemColors.ButtonHighlight;
-            lblEmitir.Location = new Point(6, 13);
-            lblEmitir.Name = "lblEmitir";
-            lblEmitir.Size = new Size(150, 21);
-            lblEmitir.TabIndex = 11;
-            lblEmitir.Text = "Emitir Comprovante";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = Color.FromArgb(255, 106, 0);
-            panel1.Controls.Add(lblEmissao);
-            panel1.Location = new Point(8, 43);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(718, 53);
-            panel1.TabIndex = 12;
-            panel1.MouseClick += panel1_MouseClick;
-            panel1.MouseEnter += panel1_MouseEnter;
-            panel1.MouseLeave += panel1_MouseLeave;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = Color.FromArgb(255, 106, 0);
-            panel3.Controls.Add(lblFluxo);
-            panel3.Location = new Point(8, 113);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(718, 51);
-            panel3.TabIndex = 11;
-            // 
-            // panel5
-            // 
-            panel5.BackColor = Color.FromArgb(255, 106, 0);
-            panel5.Controls.Add(lblEmitir);
-            panel5.Location = new Point(8, 432);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(718, 45);
-            panel5.TabIndex = 14;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.BackgroundColor = Color.FromArgb(62, 62, 62);
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ColEntrada, ColSaidas, ColSaldo, ColLista });
-            dataGridView1.Location = new Point(8, 164);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(718, 255);
-            dataGridView1.TabIndex = 36;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
-            // 
-            // ColEntrada
-            // 
-            ColEntrada.HeaderText = "Entradas";
-            ColEntrada.Name = "ColEntrada";
-            // 
-            // ColSaidas
-            // 
-            ColSaidas.HeaderText = "Saídas";
-            ColSaidas.Name = "ColSaidas";
-            // 
-            // ColSaldo
-            // 
-            ColSaldo.HeaderText = "Saldo do dia/mês";
-            ColSaldo.Name = "ColSaldo";
-            // 
-            // ColLista
-            // 
-            ColLista.HeaderText = "Lista de movimentações";
-            ColLista.Name = "ColLista";
             // 
             // lblHome
             // 
@@ -162,7 +64,7 @@
             lblHome.Cursor = Cursors.Hand;
             lblHome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblHome.ForeColor = SystemColors.ButtonHighlight;
-            lblHome.Location = new Point(40, 9);
+            lblHome.Location = new Point(51, 84);
             lblHome.Name = "lblHome";
             lblHome.Size = new Size(52, 21);
             lblHome.TabIndex = 41;
@@ -176,21 +78,22 @@
             lblCliente.Cursor = Cursors.Hand;
             lblCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCliente.ForeColor = SystemColors.ButtonHighlight;
-            lblCliente.Location = new Point(106, 9);
+            lblCliente.Location = new Point(50, 123);
             lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(58, 21);
+            lblCliente.Size = new Size(65, 21);
             lblCliente.TabIndex = 42;
-            lblCliente.Text = "Cliente";
+            lblCliente.Text = "Clientes";
             lblCliente.Click += lblCliente_Click;
             // 
             // lblOrcamentos
             // 
             lblOrcamentos.AutoSize = true;
-            lblOrcamentos.BackColor = Color.Black;
+            lblOrcamentos.BackColor = Color.Transparent;
             lblOrcamentos.Cursor = Cursors.Hand;
             lblOrcamentos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblOrcamentos.ForeColor = SystemColors.ButtonHighlight;
-            lblOrcamentos.Location = new Point(248, 9);
+            lblOrcamentos.Image = (Image)resources.GetObject("lblOrcamentos.Image");
+            lblOrcamentos.Location = new Point(48, 192);
             lblOrcamentos.Name = "lblOrcamentos";
             lblOrcamentos.Size = new Size(95, 21);
             lblOrcamentos.TabIndex = 44;
@@ -202,7 +105,7 @@
             label1.Cursor = Cursors.Hand;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(176, 9);
+            label1.Location = new Point(50, 157);
             label1.Name = "label1";
             label1.Size = new Size(63, 21);
             label1.TabIndex = 45;
@@ -211,47 +114,163 @@
             label1.MouseClick += label1_MouseClick;
             label1.MouseEnter += label1_MouseEnter;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(8, 12);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(172, 42);
+            pictureBox1.TabIndex = 48;
+            pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.Location = new Point(238, 24);
+            label2.Name = "label2";
+            label2.Size = new Size(126, 30);
+            label2.TabIndex = 49;
+            label2.Text = "Orçamentos";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.InitialImage = (Image)resources.GetObject("pictureBox2.InitialImage");
+            pictureBox2.Location = new Point(13, 83);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(25, 25);
+            pictureBox2.TabIndex = 50;
+            pictureBox2.TabStop = false;
+            pictureBox2.Click += pictureBox2_Click;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(12, 120);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(25, 26);
+            pictureBox3.TabIndex = 51;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(12, 155);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(26, 28);
+            pictureBox4.TabIndex = 52;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(12, 190);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(25, 28);
+            pictureBox5.TabIndex = 53;
+            pictureBox5.TabStop = false;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(8, 225);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(661, 181);
+            dataGridView1.TabIndex = 66;
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.BackColor = Color.Transparent;
+            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
+            pictureBox15.Location = new Point(215, 24);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(26, 30);
+            pictureBox15.TabIndex = 69;
+            pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
+            pictureBox16.Location = new Point(-4, 188);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(166, 29);
+            pictureBox16.TabIndex = 70;
+            pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            pictureBox17.BackgroundImage = (Image)resources.GetObject("pictureBox17.BackgroundImage");
+            pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
+            pictureBox17.Location = new Point(1, 189);
+            pictureBox17.Name = "pictureBox17";
+            pictureBox17.Size = new Size(10, 28);
+            pictureBox17.TabIndex = 71;
+            pictureBox17.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(446, 414);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(172, 42);
+            pictureBox6.TabIndex = 72;
+            pictureBox6.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.Location = new Point(209, 95);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(423, 100);
+            panel1.TabIndex = 73;
+            // 
             // Orçamentos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(738, 494);
+            ClientSize = new Size(675, 468);
+            Controls.Add(panel1);
+            Controls.Add(pictureBox6);
+            Controls.Add(pictureBox17);
+            Controls.Add(pictureBox15);
+            Controls.Add(dataGridView1);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(label2);
+            Controls.Add(pictureBox1);
             Controls.Add(label1);
             Controls.Add(lblOrcamentos);
             Controls.Add(lblCliente);
             Controls.Add(lblHome);
-            Controls.Add(dataGridView1);
-            Controls.Add(panel5);
-            Controls.Add(panel3);
-            Controls.Add(panel1);
-            Controls.Add(lblX);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox16);
             Name = "Orçamentos";
             Text = "Orçamentos";
-            panel1.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            panel5.ResumeLayout(false);
-            panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label lblX;
-        private Label lblEmissao;
-        private Label lblFluxo;
         private Label label8;
         private Label label9;
         private Label label10;
         private Label label11;
-        private Label lblEmitir;
-        private Panel panel1;
-        private Panel panel2;
         private Panel panel4;
-        private Panel panel3;
-        private Panel panel5;
         private Label label36;
         private Label label35;
         private Label label34;
@@ -276,15 +295,22 @@
         private Label label15;
         private Label label14;
         private Label label13;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn ColEntrada;
-        private DataGridViewTextBoxColumn ColSaidas;
-        private DataGridViewTextBoxColumn ColSaldo;
-        private DataGridViewTextBoxColumn ColLista;
         private Label lblHome;
         private Label lblCliente;
         private Label lblAgenda;
         private Label lblOrcamentos;
         private Label label1;
+        private PictureBox pictureBox1;
+        private Label label2;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private DataGridView dataGridView1;
+        private PictureBox pictureBox15;
+        private PictureBox pictureBox16;
+        private PictureBox pictureBox17;
+        private PictureBox pictureBox6;
+        private Panel panel1;
     }
 }

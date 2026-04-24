@@ -51,6 +51,7 @@ namespace Tela1_Acesso
                 return;
             }
             con.Open();
+
             string sql = @"INSERT INTO Clientes 
                    (Nome, Celular, Tipodeservico, Status, Tipodepagamento)
                    VALUES 
@@ -63,6 +64,7 @@ namespace Tela1_Acesso
            
             MessageBox.Show("Cliente cadastrado com sucesso!");
             txtNome.Clear();
+
             txtCelular.Clear();
             txtTipoDeServiço.Clear();
            
