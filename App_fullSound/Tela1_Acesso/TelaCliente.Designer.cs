@@ -226,6 +226,7 @@
             dgvClientes.Name = "dgvClientes";
             dgvClientes.Size = new Size(532, 187);
             dgvClientes.TabIndex = 22;
+            dgvClientes.CellContentClick += dgvClientes_CellContentClick;
             // 
             // LbOrçamentos
             // 

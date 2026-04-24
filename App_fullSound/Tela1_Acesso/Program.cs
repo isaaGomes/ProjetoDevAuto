@@ -1,3 +1,5 @@
+using FullSoundApp;
+
 namespace Tela1_Acesso
 {
     internal static class Program
@@ -12,7 +14,9 @@ namespace Tela1_Acesso
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
 
+
             Application.Run(new Orçamentos());
+
       }
     }
 }

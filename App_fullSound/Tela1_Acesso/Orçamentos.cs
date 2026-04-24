@@ -65,9 +65,7 @@ namespace Tela1_Acesso
         private void lblHome_Click(object sender, EventArgs e)
         {
 
-            Form1 home = new Form1();
-            home.Show();
-            this.Hide();
+
 
         }
 
@@ -92,9 +90,7 @@ namespace Tela1_Acesso
 
         private void label1_Click_1(object sender, EventArgs e)
         {
-            Agenda agenda = new Agenda();
-            agenda.Show();
-            this.Hide();
+
         }
 
         private void label1_MouseClick(object sender, MouseEventArgs e)

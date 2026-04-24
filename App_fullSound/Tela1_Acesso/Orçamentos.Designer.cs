@@ -39,32 +39,22 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
+            dataGridView1 = new DataGridView();
+            pictureBox15 = new PictureBox();
+            pictureBox16 = new PictureBox();
+            pictureBox17 = new PictureBox();
             pictureBox6 = new PictureBox();
-            pictureBox7 = new PictureBox();
-            pictureBox8 = new PictureBox();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            pictureBox9 = new PictureBox();
-            pictureBox10 = new PictureBox();
-            pictureBox11 = new PictureBox();
-            pictureBox12 = new PictureBox();
-            pictureBox13 = new PictureBox();
-            pictureBox14 = new PictureBox();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).BeginInit();
             SuspendLayout();
             // 
             // lblHome
@@ -74,7 +64,7 @@
             lblHome.Cursor = Cursors.Hand;
             lblHome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblHome.ForeColor = SystemColors.ButtonHighlight;
-            lblHome.Location = new Point(53, 84);
+            lblHome.Location = new Point(51, 84);
             lblHome.Name = "lblHome";
             lblHome.Size = new Size(52, 21);
             lblHome.TabIndex = 41;
@@ -88,7 +78,7 @@
             lblCliente.Cursor = Cursors.Hand;
             lblCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblCliente.ForeColor = SystemColors.ButtonHighlight;
-            lblCliente.Location = new Point(53, 123);
+            lblCliente.Location = new Point(50, 123);
             lblCliente.Name = "lblCliente";
             lblCliente.Size = new Size(65, 21);
             lblCliente.TabIndex = 42;
@@ -98,11 +88,12 @@
             // lblOrcamentos
             // 
             lblOrcamentos.AutoSize = true;
-            lblOrcamentos.BackColor = Color.Black;
+            lblOrcamentos.BackColor = Color.Transparent;
             lblOrcamentos.Cursor = Cursors.Hand;
             lblOrcamentos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lblOrcamentos.ForeColor = SystemColors.ButtonHighlight;
-            lblOrcamentos.Location = new Point(50, 192);
+            lblOrcamentos.Image = (Image)resources.GetObject("lblOrcamentos.Image");
+            lblOrcamentos.Location = new Point(48, 192);
             lblOrcamentos.Name = "lblOrcamentos";
             lblOrcamentos.Size = new Size(95, 21);
             lblOrcamentos.TabIndex = 44;
@@ -114,7 +105,7 @@
             label1.Cursor = Cursors.Hand;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(53, 157);
+            label1.Location = new Point(50, 157);
             label1.Name = "label1";
             label1.Size = new Size(63, 21);
             label1.TabIndex = 45;
@@ -137,7 +128,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(237, 24);
+            label2.Location = new Point(238, 24);
             label2.Name = "label2";
             label2.Size = new Size(126, 30);
             label2.TabIndex = 49;
@@ -174,154 +165,79 @@
             // 
             // pictureBox5
             // 
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(12, 189);
+            pictureBox5.Location = new Point(12, 190);
             pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(25, 30);
+            pictureBox5.Size = new Size(25, 28);
             pictureBox5.TabIndex = 53;
             pictureBox5.TabStop = false;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(8, 225);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(661, 181);
+            dataGridView1.TabIndex = 66;
+            // 
+            // pictureBox15
+            // 
+            pictureBox15.BackColor = Color.Transparent;
+            pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
+            pictureBox15.Location = new Point(215, 24);
+            pictureBox15.Name = "pictureBox15";
+            pictureBox15.Size = new Size(26, 30);
+            pictureBox15.TabIndex = 69;
+            pictureBox15.TabStop = false;
+            // 
+            // pictureBox16
+            // 
+            pictureBox16.Image = (Image)resources.GetObject("pictureBox16.Image");
+            pictureBox16.Location = new Point(-4, 188);
+            pictureBox16.Name = "pictureBox16";
+            pictureBox16.Size = new Size(166, 29);
+            pictureBox16.TabIndex = 70;
+            pictureBox16.TabStop = false;
+            // 
+            // pictureBox17
+            // 
+            pictureBox17.BackgroundImage = (Image)resources.GetObject("pictureBox17.BackgroundImage");
+            pictureBox17.Image = (Image)resources.GetObject("pictureBox17.Image");
+            pictureBox17.Location = new Point(1, 189);
+            pictureBox17.Name = "pictureBox17";
+            pictureBox17.Size = new Size(10, 28);
+            pictureBox17.TabIndex = 71;
+            pictureBox17.TabStop = false;
+            // 
             // pictureBox6
             // 
-            pictureBox6.BackColor = Color.Transparent;
-            pictureBox6.BackgroundImage = (Image)resources.GetObject("pictureBox6.BackgroundImage");
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(246, 127);
+            pictureBox6.Location = new Point(446, 414);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(39, 42);
-            pictureBox6.TabIndex = 54;
+            pictureBox6.Size = new Size(172, 42);
+            pictureBox6.TabIndex = 72;
             pictureBox6.TabStop = false;
-            pictureBox6.Click += pictureBox6_Click;
             // 
-            // pictureBox7
+            // panel1
             // 
-            pictureBox7.BackgroundImage = (Image)resources.GetObject("pictureBox7.BackgroundImage");
-            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(426, 123);
-            pictureBox7.Name = "pictureBox7";
-            pictureBox7.Size = new Size(35, 36);
-            pictureBox7.TabIndex = 55;
-            pictureBox7.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
-            pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(607, 130);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(41, 36);
-            pictureBox8.TabIndex = 56;
-            pictureBox8.TabStop = false;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Image = (Image)resources.GetObject("label3.Image");
-            label3.Location = new Point(295, 144);
-            label3.Name = "label3";
-            label3.Size = new Size(65, 21);
-            label3.TabIndex = 57;
-            label3.Text = "Clientes";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Image = (Image)resources.GetObject("label4.Image");
-            label4.Location = new Point(487, 143);
-            label4.Name = "label4";
-            label4.Size = new Size(63, 21);
-            label4.TabIndex = 58;
-            label4.Text = "Agenda";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Image = (Image)resources.GetObject("label5.Image");
-            label5.Location = new Point(652, 145);
-            label5.Name = "label5";
-            label5.Size = new Size(95, 21);
-            label5.TabIndex = 59;
-            label5.Text = "Orçamentos";
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Image = (Image)resources.GetObject("pictureBox9.Image");
-            pictureBox9.Location = new Point(243, 94);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(147, 103);
-            pictureBox9.TabIndex = 60;
-            pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = (Image)resources.GetObject("pictureBox10.Image");
-            pictureBox10.Location = new Point(424, 94);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(148, 103);
-            pictureBox10.TabIndex = 61;
-            pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.Image = (Image)resources.GetObject("pictureBox11.Image");
-            pictureBox11.Location = new Point(605, 94);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(152, 103);
-            pictureBox11.TabIndex = 62;
-            pictureBox11.TabStop = false;
-            // 
-            // pictureBox12
-            // 
-            pictureBox12.BackgroundImage = (Image)resources.GetObject("pictureBox12.BackgroundImage");
-            pictureBox12.Image = (Image)resources.GetObject("pictureBox12.Image");
-            pictureBox12.Location = new Point(247, 168);
-            pictureBox12.Name = "pictureBox12";
-            pictureBox12.Size = new Size(138, 10);
-            pictureBox12.TabIndex = 63;
-            pictureBox12.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            pictureBox13.BackgroundImage = (Image)resources.GetObject("pictureBox13.BackgroundImage");
-            pictureBox13.Image = (Image)resources.GetObject("pictureBox13.Image");
-            pictureBox13.Location = new Point(425, 168);
-            pictureBox13.Name = "pictureBox13";
-            pictureBox13.Size = new Size(143, 10);
-            pictureBox13.TabIndex = 64;
-            pictureBox13.TabStop = false;
-            // 
-            // pictureBox14
-            // 
-            pictureBox14.BackgroundImage = (Image)resources.GetObject("pictureBox14.BackgroundImage");
-            pictureBox14.Image = (Image)resources.GetObject("pictureBox14.Image");
-            pictureBox14.Location = new Point(607, 169);
-            pictureBox14.Name = "pictureBox14";
-            pictureBox14.Size = new Size(142, 14);
-            pictureBox14.TabIndex = 65;
-            pictureBox14.TabStop = false;
+            panel1.Location = new Point(209, 95);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(423, 100);
+            panel1.TabIndex = 73;
             // 
             // Orçamentos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(817, 494);
-            Controls.Add(pictureBox14);
-            Controls.Add(pictureBox13);
-            Controls.Add(pictureBox12);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(pictureBox8);
-            Controls.Add(pictureBox7);
+            ClientSize = new Size(675, 468);
+            Controls.Add(panel1);
             Controls.Add(pictureBox6);
-            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox17);
+            Controls.Add(pictureBox15);
+            Controls.Add(dataGridView1);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -331,9 +247,8 @@
             Controls.Add(lblOrcamentos);
             Controls.Add(lblCliente);
             Controls.Add(lblHome);
-            Controls.Add(pictureBox9);
-            Controls.Add(pictureBox10);
-            Controls.Add(pictureBox11);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox16);
             Name = "Orçamentos";
             Text = "Orçamentos";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -341,15 +256,11 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox12).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox13).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox14).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -395,17 +306,11 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
+        private DataGridView dataGridView1;
+        private PictureBox pictureBox15;
+        private PictureBox pictureBox16;
+        private PictureBox pictureBox17;
         private PictureBox pictureBox6;
-        private PictureBox pictureBox7;
-        private PictureBox pictureBox8;
-        private Label label3;
-        private Label label4;
-        private Label label5;
-        private PictureBox pictureBox9;
-        private PictureBox pictureBox10;
-        private PictureBox pictureBox11;
-        private PictureBox pictureBox12;
-        private PictureBox pictureBox13;
-        private PictureBox pictureBox14;
+        private Panel panel1;
     }
 }
