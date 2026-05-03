@@ -159,9 +159,9 @@
             panel1.Controls.Add(lbHome);
             panel1.Controls.Add(ptbClientes);
             panel1.Controls.Add(ptbAgenda);
-            panel1.Location = new Point(-7, 0);
+            panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(270, 644);
+            panel1.Size = new Size(263, 622);
             panel1.TabIndex = 93;
             // 
             // pictureBox3
@@ -231,9 +231,9 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(281, 14);
+            pictureBox1.Location = new Point(261, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(1131, 601);
+            pictureBox1.Size = new Size(1157, 622);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 94;
             pictureBox1.TabStop = false;
@@ -254,7 +254,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(1441, 637);
+            ClientSize = new Size(1419, 624);
             Controls.Add(label2);
             Controls.Add(pictureBox1);
             Controls.Add(pictureBox10);

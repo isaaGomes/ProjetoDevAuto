@@ -44,8 +44,8 @@ namespace Tela1_Acesso
 
             MySqlConnection con = new MySqlConnection(conexao);
 
-            
-               
+
+
             {
                 MessageBox.Show("Preencha todos os campos");
                 return;
@@ -61,13 +61,13 @@ namespace Tela1_Acesso
             cmd.Parameters.AddWithValue("@celular", txtCelular.Text);
             cmd.Parameters.AddWithValue("@servico", txtTipoDeServiço.Text);
             cmd.Parameters.AddWithValue("@status", "Ativo");
-           
+
             MessageBox.Show("Cliente cadastrado com sucesso!");
             txtNome.Clear();
 
             txtCelular.Clear();
             txtTipoDeServiço.Clear();
-           
+
         }
         private void label1_Click(object sender, EventArgs e)
         {
@@ -95,6 +95,11 @@ namespace Tela1_Acesso
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TelaCliente_Load(object sender, EventArgs e)
         {
 
         }
