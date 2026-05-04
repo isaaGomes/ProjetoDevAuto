@@ -39,29 +39,34 @@
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox5 = new PictureBox();
-            dataGridView1 = new DataGridView();
+            dgvServicos = new DataGridView();
+            Data = new DataGridViewTextBoxColumn();
+            Servico = new DataGridViewTextBoxColumn();
+            Valor = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
             pictureBox15 = new PictureBox();
             pictureBox16 = new PictureBox();
             pictureBox17 = new PictureBox();
             pictureBox6 = new PictureBox();
             panel1 = new Panel();
+            label11 = new Label();
             label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
             label3 = new Label();
+            lbl = new Label();
+            label6 = new Label();
+            label4 = new Label();
+            lblFluxo = new Label();
             pictureBox7 = new PictureBox();
             label8 = new Label();
             label9 = new Label();
             pictureBox8 = new PictureBox();
             label12 = new Label();
-            panel2 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServicos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
@@ -69,7 +74,6 @@
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            panel2.SuspendLayout();
             SuspendLayout();
             // 
             // lblHome
@@ -113,6 +117,7 @@
             lblOrcamentos.Size = new Size(95, 21);
             lblOrcamentos.TabIndex = 44;
             lblOrcamentos.Text = "Orçamentos";
+            lblOrcamentos.Click += lblOrcamentos_Click;
             // 
             // label1
             // 
@@ -143,7 +148,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(234, 24);
+            label2.Location = new Point(258, 24);
             label2.Name = "label2";
             label2.Size = new Size(126, 30);
             label2.TabIndex = 49;
@@ -168,6 +173,7 @@
             pictureBox3.Size = new Size(25, 26);
             pictureBox3.TabIndex = 51;
             pictureBox3.TabStop = false;
+            pictureBox3.Click += pictureBox3_Click;
             // 
             // pictureBox4
             // 
@@ -177,31 +183,62 @@
             pictureBox4.Size = new Size(26, 28);
             pictureBox4.TabIndex = 52;
             pictureBox4.TabStop = false;
+            pictureBox4.Click += pictureBox4_Click;
             // 
             // pictureBox5
             // 
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox5.BackgroundImage = (Image)resources.GetObject("pictureBox5.BackgroundImage");
+            pictureBox5.BackColor = Color.FromArgb(44, 44, 43);
             pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new Point(12, 193);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new Size(25, 23);
             pictureBox5.TabIndex = 53;
             pictureBox5.TabStop = false;
+            pictureBox5.Click += pictureBox5_Click;
             // 
-            // dataGridView1
+            // dgvServicos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(209, 232);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(460, 154);
-            dataGridView1.TabIndex = 66;
+            dgvServicos.AllowUserToAddRows = false;
+            dgvServicos.AllowUserToDeleteRows = false;
+            dgvServicos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvServicos.BackgroundColor = Color.FromArgb(46, 46, 46);
+            dgvServicos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvServicos.Columns.AddRange(new DataGridViewColumn[] { Data, Servico, Valor, Status });
+            dgvServicos.EditMode = DataGridViewEditMode.EditProgrammatically;
+            dgvServicos.Location = new Point(234, 237);
+            dgvServicos.MultiSelect = false;
+            dgvServicos.Name = "dgvServicos";
+            dgvServicos.RowHeadersVisible = false;
+            dgvServicos.Size = new Size(835, 331);
+            dgvServicos.TabIndex = 66;
+            dgvServicos.CellContentClick += dgvServiços_CellContentClick;
+            dgvServicos.CellPainting += dgvServicos_CellPainting;
+            // 
+            // Data
+            // 
+            Data.HeaderText = "Data";
+            Data.Name = "Data";
+            // 
+            // Servico
+            // 
+            Servico.HeaderText = "Serviço";
+            Servico.Name = "Servico";
+            // 
+            // Valor
+            // 
+            Valor.HeaderText = "R$ Valor";
+            Valor.Name = "Valor";
+            // 
+            // Status
+            // 
+            Status.HeaderText = "Status";
+            Status.Name = "Status";
             // 
             // pictureBox15
             // 
             pictureBox15.BackColor = Color.Transparent;
             pictureBox15.Image = (Image)resources.GetObject("pictureBox15.Image");
-            pictureBox15.Location = new Point(209, 25);
+            pictureBox15.Location = new Point(233, 25);
             pictureBox15.Name = "pictureBox15";
             pictureBox15.Size = new Size(26, 30);
             pictureBox15.TabIndex = 69;
@@ -215,6 +252,7 @@
             pictureBox16.Size = new Size(166, 28);
             pictureBox16.TabIndex = 70;
             pictureBox16.TabStop = false;
+            pictureBox16.Click += pictureBox16_Click;
             // 
             // pictureBox17
             // 
@@ -229,93 +267,116 @@
             // pictureBox6
             // 
             pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
-            pictureBox6.Location = new Point(452, 408);
+            pictureBox6.Location = new Point(851, 581);
             pictureBox6.Name = "pictureBox6";
-            pictureBox6.Size = new Size(226, 48);
+            pictureBox6.Size = new Size(223, 45);
             pictureBox6.TabIndex = 72;
             pictureBox6.TabStop = false;
             // 
             // panel1
             // 
-            panel1.BackColor = Color.WhiteSmoke;
-            panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
+            panel1.BackColor = Color.FromArgb(44, 44, 43);
+            panel1.Controls.Add(label11);
             panel1.Controls.Add(label7);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(label5);
-            panel1.Controls.Add(label4);
             panel1.Controls.Add(label3);
-            panel1.Location = new Point(211, 84);
+            panel1.Controls.Add(lbl);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(lblFluxo);
+            panel1.Location = new Point(234, 83);
             panel1.Name = "panel1";
-            panel1.Size = new Size(458, 99);
+            panel1.Size = new Size(835, 115);
             panel1.TabIndex = 73;
             panel1.Paint += panel1_Paint;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label11.ForeColor = Color.DarkOrange;
+            label11.Location = new Point(642, 53);
+            label11.Name = "label11";
+            label11.Size = new Size(50, 20);
+            label11.TabIndex = 8;
+            label11.Text = "Saldo:";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.ForeColor = Color.MediumSeaGreen;
-            label7.Image = (Image)resources.GetObject("label7.Image");
-            label7.Location = new Point(10, 47);
+            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.DarkOrange;
+            label7.Location = new Point(352, 54);
             label7.Name = "label7";
-            label7.Size = new Size(33, 21);
-            label7.TabIndex = 4;
-            label7.Text = "R$ ";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.ForeColor = SystemColors.ButtonHighlight;
-            label6.Image = (Image)resources.GetObject("label6.Image");
-            label6.Location = new Point(319, 49);
-            label6.Name = "label6";
-            label6.Size = new Size(75, 21);
-            label6.TabIndex = 3;
-            label6.Text = "Saldo: R$";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.ForeColor = SystemColors.ButtonHighlight;
-            label5.Image = (Image)resources.GetObject("label5.Image");
-            label5.Location = new Point(219, 49);
-            label5.Name = "label5";
-            label5.Size = new Size(29, 21);
-            label5.TabIndex = 2;
-            label5.Text = "R$";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.ForeColor = SystemColors.ButtonHighlight;
-            label4.Image = (Image)resources.GetObject("label4.Image");
-            label4.Location = new Point(113, 48);
-            label4.Name = "label4";
-            label4.Size = new Size(29, 21);
-            label4.TabIndex = 1;
-            label4.Text = "R$";
-            label4.Click += label4_Click_1;
+            label7.Size = new Size(55, 20);
+            label7.TabIndex = 6;
+            label7.Text = "Saídas:";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.ForeColor = SystemColors.ButtonHighlight;
-            label3.Image = (Image)resources.GetObject("label3.Image");
-            label3.Location = new Point(10, 16);
+            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.DarkOrange;
+            label3.Location = new Point(11, 54);
             label3.Name = "label3";
-            label3.Size = new Size(109, 21);
-            label3.TabIndex = 0;
-            label3.Text = "Fluxo de Caixa";
+            label3.Size = new Size(69, 20);
+            label3.TabIndex = 5;
+            label3.Text = "Entradas:";
+            // 
+            // lbl
+            // 
+            lbl.AutoSize = true;
+            lbl.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lbl.ForeColor = Color.MediumSeaGreen;
+            lbl.Image = (Image)resources.GetObject("lbl.Image");
+            lbl.Location = new Point(10, 75);
+            lbl.Name = "lbl";
+            lbl.Size = new Size(38, 25);
+            lbl.TabIndex = 4;
+            lbl.Text = "R$ ";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ForeColor = SystemColors.ButtonHighlight;
+            label6.Image = (Image)resources.GetObject("label6.Image");
+            label6.Location = new Point(642, 75);
+            label6.Name = "label6";
+            label6.Size = new Size(33, 25);
+            label6.TabIndex = 3;
+            label6.Text = "R$";
+            label6.Click += label6_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Firebrick;
+            label4.Image = (Image)resources.GetObject("label4.Image");
+            label4.Location = new Point(352, 75);
+            label4.Name = "label4";
+            label4.Size = new Size(33, 25);
+            label4.TabIndex = 1;
+            label4.Text = "R$";
+            label4.Click += label4_Click_1;
+            // 
+            // lblFluxo
+            // 
+            lblFluxo.AutoSize = true;
+            lblFluxo.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblFluxo.ForeColor = SystemColors.ButtonHighlight;
+            lblFluxo.Image = (Image)resources.GetObject("lblFluxo.Image");
+            lblFluxo.Location = new Point(10, 16);
+            lblFluxo.Name = "lblFluxo";
+            lblFluxo.Size = new Size(134, 25);
+            lblFluxo.TabIndex = 0;
+            lblFluxo.Text = "Fluxo de Caixa";
             // 
             // pictureBox7
             // 
-            pictureBox7.BackColor = Color.Violet;
+            pictureBox7.BackColor = Color.FromArgb(44, 44, 43);
             pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
-            pictureBox7.Location = new Point(387, 321);
+            pictureBox7.Location = new Point(861, 586);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new Size(32, 32);
             pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
@@ -335,20 +396,21 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label9.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.ButtonHighlight;
-            label9.Location = new Point(210, 208);
+            label9.Location = new Point(231, 209);
             label9.Name = "label9";
-            label9.Size = new Size(111, 17);
+            label9.Size = new Size(124, 20);
             label9.TabIndex = 76;
             label9.Text = "Listas de Serviços";
+            label9.Click += label9_Click_1;
             // 
             // pictureBox8
             // 
-            pictureBox8.BackColor = Color.FromArgb(245, 166, 35);
+            pictureBox8.BackColor = Color.FromArgb(216, 141, 41);
             pictureBox8.BackgroundImageLayout = ImageLayout.None;
             pictureBox8.Image = (Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new Point(5, 5);
+            pictureBox8.Location = new Point(864, 589);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new Size(24, 24);
             pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
@@ -359,30 +421,22 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label12.ForeColor = Color.DarkOrange;
             label12.Image = (Image)resources.GetObject("label12.Image");
-            label12.Location = new Point(506, 422);
+            label12.Location = new Point(915, 593);
             label12.Name = "label12";
-            label12.Size = new Size(124, 17);
+            label12.Size = new Size(142, 20);
             label12.TabIndex = 78;
             label12.Text = "Emitir Comprovante";
-            // 
-            // panel2
-            // 
-            panel2.Controls.Add(pictureBox8);
-            panel2.Location = new Point(463, 415);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(32, 32);
-            panel2.TabIndex = 79;
             // 
             // Orçamentos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(707, 468);
-            Controls.Add(panel2);
+            ClientSize = new Size(1099, 642);
+            Controls.Add(pictureBox8);
             Controls.Add(label12);
             Controls.Add(label9);
             Controls.Add(label8);
@@ -391,7 +445,7 @@
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox17);
             Controls.Add(pictureBox15);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvServicos);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
@@ -405,13 +459,13 @@
             Controls.Add(pictureBox16);
             Name = "Orçamentos";
             Text = "Orçamentos";
-            Load += Orçamentos_Load;
+            Load += Orçamentos_Load_1;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServicos).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox15).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox16).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).EndInit();
@@ -420,7 +474,6 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            panel2.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -428,7 +481,6 @@
         #endregion
         private Label label8;
         private Label label9;
-        private Label label10;
         private Label label11;
         private Panel panel4;
         private Label label36;
@@ -466,20 +518,24 @@
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
         private PictureBox pictureBox5;
-        private DataGridView dataGridView1;
+        private DataGridView dgvServicos;
         private PictureBox pictureBox15;
         private PictureBox pictureBox16;
         private PictureBox pictureBox17;
         private PictureBox pictureBox6;
         private Panel panel1;
         private PictureBox pictureBox7;
-        private Label label7;
+        private Label lbl;
         private Label label6;
-        private Label label5;
         private Label label4;
-        private Label label3;
+        private Label lblFluxo;
         private PictureBox pictureBox8;
         private Label label12;
-        private Panel panel2;
+        private Label label7;
+        private Label label3;
+        private DataGridViewTextBoxColumn Data;
+        private DataGridViewTextBoxColumn Servico;
+        private DataGridViewTextBoxColumn Valor;
+        private DataGridViewTextBoxColumn Status;
     }
 }
