@@ -30,7 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orçamentos));
             label2 = new Label();
-            dgvOrcamento = new DataGridView();
+            dgvServicos = new DataGridView();
+            Data = new DataGridViewTextBoxColumn();
+            Servico = new DataGridViewTextBoxColumn();
+            Valor = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             label7 = new Label();
             label6 = new Label();
@@ -50,19 +54,19 @@
             label10 = new Label();
             lblTitulo = new Label();
             lbClientes = new Label();
-            pictureBox3 = new PictureBox();
             ptbClientes = new PictureBox();
             label13 = new Label();
+            pictureBox3 = new PictureBox();
             btnEmitirComprovante = new Button();
-            ((System.ComponentModel.ISupportInitialize)dgvOrcamento).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServicos).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)ptbOrçamentos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptbAgenda).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptbClientes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -76,14 +80,36 @@
             label2.TabIndex = 49;
             label2.Text = "Orçamento";
             // 
-            // dgvOrcamento
+            // dgvServicos
             // 
-            dgvOrcamento.BackgroundColor = Color.FromArgb(64, 64, 64);
-            dgvOrcamento.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvOrcamento.Location = new Point(431, 287);
-            dgvOrcamento.Name = "dgvOrcamento";
-            dgvOrcamento.Size = new Size(929, 325);
-            dgvOrcamento.TabIndex = 66;
+            dgvServicos.BackgroundColor = Color.FromArgb(64, 64, 64);
+            dgvServicos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvServicos.Columns.AddRange(new DataGridViewColumn[] { Data, Servico, Valor, Status });
+            dgvServicos.Location = new Point(431, 287);
+            dgvServicos.Name = "dgvServicos";
+            dgvServicos.RowHeadersVisible = false;
+            dgvServicos.Size = new Size(929, 325);
+            dgvServicos.TabIndex = 66;
+            // 
+            // Data
+            // 
+            Data.HeaderText = "Data";
+            Data.Name = "Data";
+            // 
+            // Servico
+            // 
+            Servico.HeaderText = "Servico";
+            Servico.Name = "Servico";
+            // 
+            // Valor
+            // 
+            Valor.HeaderText = "Valor";
+            Valor.Name = "Valor";
+            // 
+            // Status
+            // 
+            Status.HeaderText = "Status";
+            Status.Name = "Status";
             // 
             // panel1
             // 
@@ -98,7 +124,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(489, 99);
             panel1.TabIndex = 73;
-            panel1.Paint += panel1_Paint;
             // 
             // label7
             // 
@@ -147,7 +172,6 @@
             label4.Size = new Size(29, 21);
             label4.TabIndex = 1;
             label4.Text = "R$";
-            label4.Click += label4_Click_1;
             // 
             // label3
             // 
@@ -310,17 +334,6 @@
             lbClientes.TabIndex = 87;
             lbClientes.Text = "Cliente";
             // 
-            // pictureBox3
-            // 
-            pictureBox3.ErrorImage = null;
-            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(431, 32);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(55, 55);
-            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox3.TabIndex = 89;
-            pictureBox3.TabStop = false;
-            // 
             // ptbClientes
             // 
             ptbClientes.ErrorImage = null;
@@ -342,6 +355,17 @@
             label13.Size = new Size(55, 21);
             label13.TabIndex = 86;
             label13.Text = "Home";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.ErrorImage = null;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(431, 32);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(55, 55);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 89;
+            pictureBox3.TabStop = false;
             // 
             // btnEmitirComprovante
             // 
@@ -367,13 +391,13 @@
             Controls.Add(label9);
             Controls.Add(panel1);
             Controls.Add(pictureBox3);
-            Controls.Add(dgvOrcamento);
+            Controls.Add(dgvServicos);
             Controls.Add(label2);
             Controls.Add(btnEmitirComprovante);
             Name = "Orçamentos";
             Text = "Orçamentos";
             Load += Orçamentos_Load;
-            ((System.ComponentModel.ISupportInitialize)dgvOrcamento).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvServicos).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)ptbOrçamentos).EndInit();
@@ -382,8 +406,8 @@
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptbClientes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -417,7 +441,7 @@
         private Label label13;
         private Label lblAgenda;
         private Label label2;
-        private DataGridView dgvOrcamento;
+        private DataGridView dgvServicos;
         private Panel panel1;
         private Label label7;
         private Label label6;
@@ -439,5 +463,9 @@
         private PictureBox pictureBox3;
         private PictureBox ptbClientes;
         private Button btnEmitirComprovante;
+        private DataGridViewTextBoxColumn Data;
+        private DataGridViewTextBoxColumn Servico;
+        private DataGridViewTextBoxColumn Valor;
+        private DataGridViewTextBoxColumn Status;
     }
 }

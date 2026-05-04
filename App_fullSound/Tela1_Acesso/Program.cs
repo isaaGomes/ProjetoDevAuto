@@ -15,7 +15,7 @@ namespace Tela1_Acesso
             ApplicationConfiguration.Initialize();
 
 
-            Application.Run(new Home());
+            Application.Run(new Orçamentos());
 
       }
     }
