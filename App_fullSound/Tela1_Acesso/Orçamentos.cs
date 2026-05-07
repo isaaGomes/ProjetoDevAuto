@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Drawing2D;
+using FullSoundApp;
 
 namespace Tela1_Acesso
 {
@@ -19,7 +20,7 @@ namespace Tela1_Acesso
             InitializeComponent();
         }
 
-        
+
 
         private void lblCliente_Click(object sender, EventArgs e)
         {
@@ -30,7 +31,7 @@ namespace Tela1_Acesso
 
         }
 
-        
+
 
 
 
@@ -50,10 +51,38 @@ namespace Tela1_Acesso
 
         private void Orçamentos_Load(object sender, EventArgs e)
         {
+
+            foreach (DataGridViewColumn col in dgvServicos.Columns)
+            {
+                col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                col.DefaultCellStyle.Padding = new Padding(0);
+            }
+            dgvServicos.RowHeadersVisible = false;
+            dgvServicos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+
+
+            dgvServicos.ColumnHeadersDefaultCellStyle.Alignment =
+            DataGridViewContentAlignment.MiddleCenter;
+
+            dgvServicos.ColumnHeadersDefaultCellStyle.Alignment =
+            DataGridViewContentAlignment.MiddleCenter;
+
+
+            dgvServicos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgvServicos.RowHeadersVisible = false;
+            dgvServicos.AllowUserToAddRows = false;
+
+            dgvServicos.BorderStyle = BorderStyle.None;
+            dgvServicos.GridColor = Color.FromArgb(45, 45, 45);
+
+            dgvServicos.EnableHeadersVisualStyles = false;
+            dgvServicos.SelectionMode = DataGridViewSelectionMode.CellSelect;
+
             ArredondarPanel(panel1, 20);
 
             dgvServicos.DefaultCellStyle.SelectionForeColor =
-dgvServicos.DefaultCellStyle.ForeColor;
+            dgvServicos.DefaultCellStyle.ForeColor;
             dgvServicos.EnableHeadersVisualStyles = false;
             dgvServicos.BackgroundColor = Color.FromArgb(32, 32, 32);
             dgvServicos.BorderStyle = BorderStyle.None;
@@ -74,20 +103,38 @@ dgvServicos.DefaultCellStyle.ForeColor;
             DataGridViewContentAlignment.MiddleCenter;
             dgvServicos.RowTemplate.Height = 38;
 
-            dgvServicos.Columns["Data"].DefaultCellStyle.Alignment =
-             DataGridViewContentAlignment.MiddleCenter;
+            dgvServicos.Rows.Add(
+                "Pedro",
+                "5852563698",
+                "Carro",
+                "21/03/2026",
+                "10:00",
+                "Elétrico",
+                "950",
+                "Pago"
+);
 
-            dgvServicos.Columns["Servico"].DefaultCellStyle.Alignment =
-                DataGridViewContentAlignment.MiddleCenter;
+            dgvServicos.Rows.Add(
+                "Maria",
+                "9656963658",
+                "Moto",
+                "25/03/2026",
+                "14:00",
+                "Suspensão",
+                "1000",
+                "Pendente"
+            );
 
-            dgvServicos.Columns["Valor"].DefaultCellStyle.Alignment =
-                DataGridViewContentAlignment.MiddleCenter;
-
-            dgvServicos.Columns["Valor"].DefaultCellStyle.Font =
-                new Font("Segoe UI", 9, FontStyle.Bold);
-
-            dgvServicos.Columns["Status"].DefaultCellStyle.Alignment =
-                DataGridViewContentAlignment.MiddleCenter;
+            dgvServicos.Rows.Add(
+                "João",
+                "1158236932",
+                "Carro",
+                "06/03/2026",
+                "09:30",
+                "Elétrico",
+                "500",
+                "Cancelado"
+            );
 
             // Remove qualquer destaque visual de seleção
             dgvServicos.DefaultCellStyle.SelectionBackColor =
@@ -102,106 +149,174 @@ dgvServicos.DefaultCellStyle.ForeColor;
             // Remove célula atual visualmente
             dgvServicos.ClearSelection();
 
-            dgvServicos.Enabled = false;
-            dgvServicos.Enabled = true;
+            dgvServicos.RowHeadersVisible = false;
+            dgvServicos.AllowUserToResizeRows = false;
+            dgvServicos.AllowUserToResizeColumns = false;
 
-            dgvServicos.Rows.Add("21/03/2026", "Elétrico", "200", "Pago");
-            dgvServicos.Rows.Add("25/03/2026", "Suspensão", "200", "Pendente");
-            dgvServicos.Rows.Add("06/03/2026", "Elétrico", "200", "Cancelado");
+
+
 
 
             foreach (DataGridViewRow row in dgvServicos.Rows)
             {
                 row.Height = 44;
             }
+
+
+            dgvServicos.CellPainting += dgvServicos_CellPainting;
+
+            dgvServicos.ClearSelection();
+            dgvServicos.Invalidate();
+            dgvServicos.Refresh();
+
+            foreach (DataGridViewColumn col in dgvServicos.Columns)
+            {
+                col.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            }
+
+            dgvServicos.ColumnHeadersDefaultCellStyle.Alignment =
+                DataGridViewContentAlignment.MiddleCenter;
         }
+
 
         private void dgvServicos_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
 
-            if (e.RowIndex < 0) return;
-
-            // ===== COLUNA STATUS =====
-            if (dgvServicos.Columns[e.ColumnIndex].Name == "Status")
             {
-                e.Handled = true;
-                e.PaintBackground(e.CellBounds, true);
+                if (e.RowIndex < 0) return;
 
-                string text = e.FormattedValue?.ToString();
-
-                Color backColor = Color.Gray;
-
-                if (text == "Pago")
-                    backColor = Color.FromArgb(0, 184, 148);
-                else if (text == "Pendente")
-                    backColor = Color.FromArgb(253, 203, 110);
-                else if (text == "Cancelado")
-                    backColor = Color.FromArgb(214, 48, 49);
-
-                Rectangle rect = new Rectangle(
-                    e.CellBounds.X + 10,
-                    e.CellBounds.Y + 8,
-                    e.CellBounds.Width - 20,
-                    e.CellBounds.Height - 16
-                );
-
-                using (System.Drawing.Drawing2D.GraphicsPath path =
-                       new System.Drawing.Drawing2D.GraphicsPath())
+                if (dgvServicos.Columns[e.ColumnIndex].Name == "Status")
                 {
-                    int radius = rect.Height;
+                    e.Handled = true;
 
-                    path.AddArc(rect.X, rect.Y, radius, radius, 180, 90);
-                    path.AddArc(rect.Right - radius, rect.Y, radius, radius, 270, 90);
-                    path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90);
-                    path.AddArc(rect.X, rect.Bottom - radius, radius, radius, 90, 90);
-                    path.CloseFigure();
+                    e.PaintBackground(e.CellBounds, true);
 
-                    using (SolidBrush brush = new SolidBrush(backColor))
+                    string status = e.FormattedValue?.ToString();
+                    Color cor = Color.Gray;
+
+                    if (status == "Pago")
+                        cor = Color.FromArgb(0, 180, 150);
+
+                    else if (status == "Pendente")
+                        cor = Color.FromArgb(240, 190, 90);
+
+                    else if (status == "Cancelado")
+                        cor = Color.FromArgb(220, 60, 60);
+
+                    using (Brush brush = new SolidBrush(cor))
+                    {
+                        int paddingHorizontal = 20;
+                        int paddingVertical = 8;
+
+                        Rectangle rect = new Rectangle(
+                            e.CellBounds.X + paddingHorizontal,
+                            e.CellBounds.Y + paddingVertical,
+                            e.CellBounds.Width - (paddingHorizontal * 2),
+                            e.CellBounds.Height - (paddingVertical * 2)
+                        );
+
+                        // borda arredondada
+                        System.Drawing.Drawing2D.GraphicsPath path =
+                            new System.Drawing.Drawing2D.GraphicsPath();
+
+                        int radius = 25;
+
+                        path.AddArc(rect.X, rect.Y, radius, radius, 180, 90);
+                        path.AddArc(rect.Right - radius, rect.Y, radius, radius, 270, 90);
+                        path.AddArc(rect.Right - radius, rect.Bottom - radius, radius, radius, 0, 90);
+                        path.AddArc(rect.X, rect.Bottom - radius, radius, radius, 90, 90);
+                        path.CloseFigure();
+
                         e.Graphics.FillPath(brush, path);
+
+                        // texto centralizado
+                        TextRenderer.DrawText(
+                            e.Graphics,
+                            status,
+                            new Font("Segoe UI", 9, FontStyle.Bold),
+                            rect,
+                            status == "Pendente" ? Color.Black : Color.White,
+                            TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
+                        );
+                        dgvServicos.RowTemplate.Height = 50;
+                    }
                 }
 
-                TextRenderer.DrawText(
-                    e.Graphics,
-                    text,
-                    e.CellStyle.Font,
-                    rect,
-                    Color.White,
-                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter
-                );
-
-                return;
             }
+        }
 
-            // ===== OUTRAS COLUNAS (linha embaixo) =====
 
 
-            e.Paint(e.ClipBounds, DataGridViewPaintParts.All);
 
-            // Desenha a linha apenas UMA vez por linha (na primeira coluna)
-            if (e.ColumnIndex == 0)
-            {
-                Rectangle rowRect =
-                    dgvServicos.GetRowDisplayRectangle(e.RowIndex, true);
 
-                using (Pen pen = new Pen(Color.FromArgb(80, 80, 80), 1))
-                {
-                    int y = rowRect.Bottom - 5;
 
-                    e.Graphics.DrawLine(
-                        pen,
-                        rowRect.Left + 20,
-                        y,
-                        rowRect.Right - 20,
-                        y
-                    );
-                }
-            }
-            e.Handled = true;
+
+
+
+
+
+        private void dgvServicos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ptbOrçamentos_Click(object sender, EventArgs e)
+        {
+            Orçamentos orçamentos1 = new Orçamentos();
+            orçamentos1.Show();
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            Home Home1 = new Home();
+            Home1.Show();
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+            Home Home1 = new Home();
+            Home1.Show();
+        }
+
+        private void ptbClientes_Click(object sender, EventArgs e)
+        {
+            TelaCliente telaCliente1 = new TelaCliente();
+            telaCliente1.Show();
+        }
+
+        private void lbClientes_Click(object sender, EventArgs e)
+        {
+            TelaCliente telaCliente1 = new TelaCliente();
+            telaCliente1.Show();
+        }
+
+        private void ptbAgenda_Click(object sender, EventArgs e)
+        {
+            Agenda agenda1 = new Agenda();
+            agenda1.Show();
+        }
+
+        private void lbAgenda_Click(object sender, EventArgs e)
+        {
+            Agenda agenda2 = new Agenda();
+            agenda2.Show();
+        }
+
+        private void LbOrçamentos_Click(object sender, EventArgs e)
+        {
+            Orçamentos orçamentos2 = new Orçamentos();
+            orçamentos2.Show();
+        }
     }
-
-
 }
 
