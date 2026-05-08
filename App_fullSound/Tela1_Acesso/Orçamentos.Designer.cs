@@ -29,12 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Orçamentos));
-            lblHome = new Label();
-            lblCliente = new Label();
-            lblOrcamentos = new Label();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
-            label2 = new Label();
+
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
@@ -52,16 +47,15 @@
             label11 = new Label();
             label7 = new Label();
             label3 = new Label();
+
             lbl = new Label();
             label6 = new Label();
             label4 = new Label();
             lblFluxo = new Label();
             pictureBox7 = new PictureBox();
-            label8 = new Label();
             label9 = new Label();
             pictureBox8 = new PictureBox();
             label12 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -71,6 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox16).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox17).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
+
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
@@ -78,83 +73,12 @@
             // 
             // lblHome
             // 
-            lblHome.AutoSize = true;
-            lblHome.BackColor = Color.Black;
-            lblHome.Cursor = Cursors.Hand;
-            lblHome.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblHome.ForeColor = SystemColors.ButtonHighlight;
-            lblHome.Location = new Point(51, 84);
-            lblHome.Name = "lblHome";
-            lblHome.Size = new Size(52, 21);
-            lblHome.TabIndex = 41;
-            lblHome.Text = "Home";
-            lblHome.Click += lblHome_Click;
             // 
-            // lblCliente
-            // 
-            lblCliente.AutoSize = true;
-            lblCliente.BackColor = Color.Black;
-            lblCliente.Cursor = Cursors.Hand;
-            lblCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblCliente.ForeColor = SystemColors.ButtonHighlight;
-            lblCliente.Location = new Point(50, 123);
-            lblCliente.Name = "lblCliente";
-            lblCliente.Size = new Size(65, 21);
-            lblCliente.TabIndex = 42;
-            lblCliente.Text = "Clientes";
-            lblCliente.Click += lblCliente_Click;
-            // 
-            // lblOrcamentos
-            // 
-            lblOrcamentos.AutoSize = true;
-            lblOrcamentos.BackColor = Color.Transparent;
-            lblOrcamentos.Cursor = Cursors.Hand;
-            lblOrcamentos.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblOrcamentos.ForeColor = SystemColors.ButtonHighlight;
-            lblOrcamentos.Image = (Image)resources.GetObject("lblOrcamentos.Image");
-            lblOrcamentos.Location = new Point(48, 192);
-            lblOrcamentos.Name = "lblOrcamentos";
-            lblOrcamentos.Size = new Size(95, 21);
-            lblOrcamentos.TabIndex = 44;
-            lblOrcamentos.Text = "Orçamentos";
-            lblOrcamentos.Click += lblOrcamentos_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Cursor = Cursors.Hand;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(50, 157);
-            label1.Name = "label1";
-            label1.Size = new Size(63, 21);
-            label1.TabIndex = 45;
-            label1.Text = "Agenda";
-            label1.Click += label1_Click_1;
-            label1.MouseClick += label1_MouseClick;
-            label1.MouseEnter += label1_MouseEnter;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(8, 12);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(172, 42);
-            pictureBox1.TabIndex = 48;
-            pictureBox1.TabStop = false;
-            // 
+
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.ForeColor = SystemColors.ButtonHighlight;
-            label2.Location = new Point(258, 24);
-            label2.Name = "label2";
-            label2.Size = new Size(126, 30);
-            label2.TabIndex = 49;
-            label2.Text = "Orçamentos";
             // 
-            // pictureBox2
+            // dgvOrcamento
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.InitialImage = (Image)resources.GetObject("pictureBox2.InitialImage");
@@ -386,12 +310,6 @@
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new Point(211, 201);
-            label8.Name = "label8";
-            label8.Size = new Size(38, 15);
-            label8.TabIndex = 75;
-            label8.Text = "label8";
             // 
             // label9
             // 
@@ -405,7 +323,7 @@
             label9.Text = "Listas de Serviços";
             label9.Click += label9_Click_1;
             // 
-            // pictureBox8
+            // LbOrçamentos
             // 
             pictureBox8.BackColor = Color.FromArgb(216, 141, 41);
             pictureBox8.BackgroundImageLayout = ImageLayout.None;
@@ -418,7 +336,7 @@
             pictureBox8.TabStop = false;
             pictureBox8.Click += pictureBox8_Click;
             // 
-            // label12
+            // lbAgenda
             // 
             label12.AutoSize = true;
             label12.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -430,37 +348,79 @@
             label12.TabIndex = 78;
             label12.Text = "Emitir Comprovante";
             // 
+            // 
+            // ptbOrçamentos
+            // 
+
+            // 
+            // ptbAgenda
+            // 
+            // 
+            // panel3
+            // 
+            // label1
+            // 
+            // pictureBox1
+            // 
+            // pictureBox7
+            // 
+            pictureBox7.Image = (Image)resources.GetObject("pictureBox7.Image");
+            pictureBox7.Location = new Point(28, 111);
+            pictureBox7.Name = "pictureBox7";
+            pictureBox7.Size = new Size(63, 56);
+            pictureBox7.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox7.TabIndex = 99;
+            pictureBox7.TabStop = false;
+            // 
+            // btnSair
+            // 
+            // label10
+            // 
+            // lblTitulo
+            // 
+            // 
+            // lbClientes
+            // 
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.ErrorImage = null;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(431, 32);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(55, 55);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 89;
+            pictureBox3.TabStop = false;
+            // 
+            // ptbClientes
+            // 
+            // 
+            // label13
+            // 
+
+            // 
+            // btnEmitirComprovante
+            // 
             // Orçamentos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
+
             ClientSize = new Size(1099, 642);
             Controls.Add(pictureBox8);
             Controls.Add(label12);
             Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(pictureBox7);
             Controls.Add(panel1);
+
             Controls.Add(pictureBox6);
             Controls.Add(pictureBox17);
             Controls.Add(pictureBox15);
             Controls.Add(dgvServicos);
             Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(label2);
-            Controls.Add(pictureBox1);
-            Controls.Add(label1);
-            Controls.Add(lblOrcamentos);
-            Controls.Add(lblCliente);
-            Controls.Add(lblHome);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox16);
-            Name = "Orçamentos";
-            Text = "Orçamentos";
             Load += Orçamentos_Load_1;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
@@ -474,46 +434,18 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Label label8;
         private Label label9;
+
         private Label label11;
-        private Panel panel4;
-        private Label label36;
-        private Label label35;
-        private Label label34;
-        private Label label33;
-        private Label label32;
-        private Label label31;
-        private Label label30;
-        private Label label29;
-        private Label label28;
-        private Label label27;
-        private Label label26;
-        private Label label25;
-        private Label label24;
-        private Label label23;
-        private Label label22;
-        private Label label21;
-        private Label label20;
-        private Label label19;
-        private Label label18;
-        private Label label17;
-        private Label label16;
-        private Label label15;
-        private Label label14;
-        private Label label13;
-        private Label lblHome;
-        private Label lblCliente;
-        private Label lblAgenda;
-        private Label lblOrcamentos;
-        private Label label1;
-        private PictureBox pictureBox1;
-        private Label label2;
+
+
+
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;

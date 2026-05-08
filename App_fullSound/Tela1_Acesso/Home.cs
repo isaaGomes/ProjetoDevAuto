@@ -18,6 +18,7 @@ namespace Tela1_Acesso
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             TelaCliente cliente = new TelaCliente();
@@ -77,11 +78,14 @@ namespace Tela1_Acesso
 
         }
 
+=======
+>>>>>>> b1339d99c5ea0e2570ccfe0da680d19689fe26d8
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
+<<<<<<< HEAD
         private void pictureBox11_Click(object sender, EventArgs e)
         {
             Agenda Agenda1 = new Agenda();
@@ -93,6 +97,15 @@ namespace Tela1_Acesso
         {
             Orçamentos orçamentos1 = new Orçamentos();
             orçamentos1.Show();
+=======
+        private void lblTitulo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+>>>>>>> b1339d99c5ea0e2570ccfe0da680d19689fe26d8
 
         }
     }

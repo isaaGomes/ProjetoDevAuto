@@ -31,45 +31,47 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TelaCliente));
             LbNome = new Label();
             LbCelular2 = new Label();
-            LbTipoDeServiço = new Label();
-            LbStatusDoCliente = new Label();
             LbTipoDePagamento = new Label();
             txtNome = new TextBox();
             txtCelular = new TextBox();
-            txtTipoDeServiço = new TextBox();
-            txtStatusDoCliente = new TextBox();
-            LbOrçamentos = new Label();
-            lbHome = new Label();
-            lbClientes = new Label();
-            lbAgenda = new Label();
-            ptbOrçamentos = new PictureBox();
-            ptbClientes = new PictureBox();
-            ptbAgenda = new PictureBox();
-            ptbHome = new PictureBox();
             dgvClientes = new DataGridView();
             gbTipodePagamento = new GroupBox();
-            rbDébito = new RadioButton();
-            btnAdicionarCliente = new Button();
-            rbCrédito = new RadioButton();
             rbPix = new RadioButton();
+            rbCrédito = new RadioButton();
+            rbDébito = new RadioButton();
             lbClientes2 = new Label();
-            ptbClientes2 = new PictureBox();
-            ptbFullSound = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)ptbOrçamentos).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptbClientes).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptbAgenda).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptbHome).BeginInit();
+            panel1 = new Panel();
+            pictureBox3 = new PictureBox();
+            label3 = new Label();
+            pictureBox2 = new PictureBox();
+            btnSair = new Button();
+            label1 = new Label();
+            lblTitulo = new Label();
+            label2 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            pictureBox1 = new PictureBox();
+            label6 = new Label();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
+            pictureBox6 = new PictureBox();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvClientes).BeginInit();
             gbTipodePagamento.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)ptbClientes2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)ptbFullSound).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             SuspendLayout();
             // 
             // LbNome
             // 
             LbNome.AutoSize = true;
             LbNome.ForeColor = Color.White;
-            LbNome.Location = new Point(227, 82);
+            LbNome.Location = new Point(435, 107);
             LbNome.Name = "LbNome";
             LbNome.Size = new Size(43, 15);
             LbNome.TabIndex = 9;
@@ -80,161 +82,43 @@
             // 
             LbCelular2.AutoSize = true;
             LbCelular2.ForeColor = Color.White;
-            LbCelular2.Location = new Point(555, 82);
+            LbCelular2.Location = new Point(780, 107);
             LbCelular2.Name = "LbCelular2";
             LbCelular2.Size = new Size(47, 15);
             LbCelular2.TabIndex = 10;
             LbCelular2.Text = "Celular:";
             LbCelular2.Click += label10_Click;
             // 
-            // LbTipoDeServiço
-            // 
-            LbTipoDeServiço.AutoSize = true;
-            LbTipoDeServiço.ForeColor = Color.White;
-            LbTipoDeServiço.Location = new Point(226, 141);
-            LbTipoDeServiço.Name = "LbTipoDeServiço";
-            LbTipoDeServiço.Size = new Size(91, 15);
-            LbTipoDeServiço.TabIndex = 11;
-            LbTipoDeServiço.Text = "Tipo de Serviço:";
-            // 
-            // LbStatusDoCliente
-            // 
-            LbStatusDoCliente.AutoSize = true;
-            LbStatusDoCliente.ForeColor = Color.White;
-            LbStatusDoCliente.Location = new Point(228, 196);
-            LbStatusDoCliente.Name = "LbStatusDoCliente";
-            LbStatusDoCliente.Size = new Size(99, 15);
-            LbStatusDoCliente.TabIndex = 12;
-            LbStatusDoCliente.Text = "Status do Cliente:";
-            LbStatusDoCliente.Click += label12_Click;
-            // 
             // LbTipoDePagamento
             // 
             LbTipoDePagamento.AutoSize = true;
             LbTipoDePagamento.ForeColor = Color.White;
-            LbTipoDePagamento.Location = new Point(736, 82);
+            LbTipoDePagamento.Location = new Point(950, 106);
             LbTipoDePagamento.Name = "LbTipoDePagamento";
-            LbTipoDePagamento.Size = new Size(114, 15);
+            LbTipoDePagamento.Size = new Size(92, 15);
             LbTipoDePagamento.TabIndex = 13;
-            LbTipoDePagamento.Text = "Tipo de pagamento:";
+            LbTipoDePagamento.Text = "Tipo do veículo:";
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(227, 100);
+            txtNome.Location = new Point(435, 125);
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(310, 23);
             txtNome.TabIndex = 14;
             // 
             // txtCelular
             // 
-            txtCelular.Location = new Point(555, 100);
+            txtCelular.Location = new Point(780, 125);
             txtCelular.Name = "txtCelular";
             txtCelular.Size = new Size(126, 23);
             txtCelular.TabIndex = 15;
             // 
-            // txtTipoDeServiço
-            // 
-            txtTipoDeServiço.Location = new Point(228, 163);
-            txtTipoDeServiço.Name = "txtTipoDeServiço";
-            txtTipoDeServiço.Size = new Size(406, 23);
-            txtTipoDeServiço.TabIndex = 16;
-            // 
-            // txtStatusDoCliente
-            // 
-            txtStatusDoCliente.Location = new Point(228, 214);
-            txtStatusDoCliente.Name = "txtStatusDoCliente";
-            txtStatusDoCliente.Size = new Size(128, 23);
-            txtStatusDoCliente.TabIndex = 17;
-            // 
-            // LbOrçamentos
-            // 
-            LbOrçamentos.AutoSize = true;
-            LbOrçamentos.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            LbOrçamentos.Location = new Point(55, 225);
-            LbOrçamentos.Name = "LbOrçamentos";
-            LbOrçamentos.Size = new Size(99, 21);
-            LbOrçamentos.TabIndex = 30;
-            LbOrçamentos.Text = "Orçamentos";
-            // 
-            // lbHome
-            // 
-            lbHome.AutoSize = true;
-            lbHome.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbHome.Location = new Point(55, 118);
-            lbHome.Name = "lbHome";
-            lbHome.Size = new Size(55, 21);
-            lbHome.TabIndex = 31;
-            lbHome.Text = "Home";
-            // 
-            // lbClientes
-            // 
-            lbClientes.AutoSize = true;
-            lbClientes.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbClientes.Location = new Point(55, 157);
-            lbClientes.Name = "lbClientes";
-            lbClientes.Size = new Size(68, 21);
-            lbClientes.TabIndex = 32;
-            lbClientes.Text = "Clientes";
-            lbClientes.Click += lbCliente_Click;
-            // 
-            // lbAgenda
-            // 
-            lbAgenda.AutoSize = true;
-            lbAgenda.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lbAgenda.Location = new Point(55, 191);
-            lbAgenda.Name = "lbAgenda";
-            lbAgenda.Size = new Size(67, 21);
-            lbAgenda.TabIndex = 33;
-            lbAgenda.Text = "Agenda";
-            // 
-            // ptbOrçamentos
-            // 
-            ptbOrçamentos.ErrorImage = null;
-            ptbOrçamentos.Image = Properties.Resources.UI_Frame_FullSound__8_;
-            ptbOrçamentos.Location = new Point(27, 225);
-            ptbOrçamentos.Name = "ptbOrçamentos";
-            ptbOrçamentos.Size = new Size(22, 21);
-            ptbOrçamentos.TabIndex = 34;
-            ptbOrçamentos.TabStop = false;
-            // 
-            // ptbClientes
-            // 
-            ptbClientes.ErrorImage = null;
-            ptbClientes.Image = Properties.Resources.UI_Frame_FullSound__6_;
-            ptbClientes.Location = new Point(27, 155);
-            ptbClientes.Name = "ptbClientes";
-            ptbClientes.Size = new Size(22, 21);
-            ptbClientes.TabIndex = 35;
-            ptbClientes.TabStop = false;
-            // 
-            // ptbAgenda
-            // 
-            ptbAgenda.ErrorImage = null;
-            ptbAgenda.Image = Properties.Resources.UI_Frame_FullSound__7_;
-            ptbAgenda.Location = new Point(28, 191);
-            ptbAgenda.Name = "ptbAgenda";
-            ptbAgenda.Size = new Size(21, 21);
-            ptbAgenda.TabIndex = 36;
-            ptbAgenda.TabStop = false;
-            // 
-            // ptbHome
-            // 
-            ptbHome.AccessibleRole = AccessibleRole.OutlineButton;
-            ptbHome.ErrorImage = null;
-            ptbHome.Image = Properties.Resources.UI_Frame_FullSound__5_;
-            ptbHome.Location = new Point(27, 118);
-            ptbHome.Name = "ptbHome";
-            ptbHome.Size = new Size(26, 21);
-            ptbHome.TabIndex = 37;
-            ptbHome.TabStop = false;
-            ptbHome.Click += pictureBox4_Click;
-            // 
             // dgvClientes
             // 
             dgvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvClientes.Location = new Point(27, 341);
+            dgvClientes.Location = new Point(431, 333);
             dgvClientes.Name = "dgvClientes";
-            dgvClientes.Size = new Size(909, 287);
+            dgvClientes.Size = new Size(719, 261);
             dgvClientes.TabIndex = 39;
             // 
             // gbTipodePagamento
@@ -242,89 +126,240 @@
             gbTipodePagamento.Controls.Add(rbPix);
             gbTipodePagamento.Controls.Add(rbCrédito);
             gbTipodePagamento.Controls.Add(rbDébito);
-            gbTipodePagamento.Location = new Point(736, 111);
+            gbTipodePagamento.Location = new Point(950, 135);
             gbTipodePagamento.Name = "gbTipodePagamento";
-            gbTipodePagamento.Size = new Size(200, 154);
+            gbTipodePagamento.Size = new Size(200, 147);
             gbTipodePagamento.TabIndex = 41;
             gbTipodePagamento.TabStop = false;
             gbTipodePagamento.Text = "groupBox1";
-            // 
-            // rbDébito
-            // 
-            rbDébito.AutoSize = true;
-            rbDébito.Location = new Point(6, 30);
-            rbDébito.Name = "rbDébito";
-            rbDébito.Size = new Size(60, 19);
-            rbDébito.TabIndex = 0;
-            rbDébito.TabStop = true;
-            rbDébito.Text = "Débito";
-            rbDébito.UseVisualStyleBackColor = true;
-            // 
-            // btnAdicionarCliente
-            // 
-            btnAdicionarCliente.BackColor = Color.FromArgb(255, 128, 0);
-            btnAdicionarCliente.BackgroundImageLayout = ImageLayout.None;
-            btnAdicionarCliente.FlatStyle = FlatStyle.Flat;
-            btnAdicionarCliente.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAdicionarCliente.ForeColor = Color.Black;
-            btnAdicionarCliente.Location = new Point(407, 267);
-            btnAdicionarCliente.Name = "btnAdicionarCliente";
-            btnAdicionarCliente.Size = new Size(130, 38);
-            btnAdicionarCliente.TabIndex = 42;
-            btnAdicionarCliente.Text = "Adicionar Cliente";
-            btnAdicionarCliente.UseVisualStyleBackColor = false;
-            // 
-            // rbCrédito
-            // 
-            rbCrédito.AutoSize = true;
-            rbCrédito.Location = new Point(6, 55);
-            rbCrédito.Name = "rbCrédito";
-            rbCrédito.Size = new Size(67, 19);
-            rbCrédito.TabIndex = 1;
-            rbCrédito.TabStop = true;
-            rbCrédito.Text = "Crédito ";
-            rbCrédito.UseVisualStyleBackColor = true;
             // 
             // rbPix
             // 
             rbPix.AutoSize = true;
             rbPix.Location = new Point(6, 82);
             rbPix.Name = "rbPix";
-            rbPix.Size = new Size(40, 19);
+            rbPix.Size = new Size(46, 19);
             rbPix.TabIndex = 2;
             rbPix.TabStop = true;
-            rbPix.Text = "Pix";
+            rbPix.Text = "SUV";
             rbPix.UseVisualStyleBackColor = true;
+            // 
+            // rbCrédito
+            // 
+            rbCrédito.AutoSize = true;
+            rbCrédito.Location = new Point(6, 55);
+            rbCrédito.Name = "rbCrédito";
+            rbCrédito.Size = new Size(57, 19);
+            rbCrédito.TabIndex = 1;
+            rbCrédito.TabStop = true;
+            rbCrédito.Text = "Sedan";
+            rbCrédito.UseVisualStyleBackColor = true;
+            // 
+            // rbDébito
+            // 
+            rbDébito.AutoSize = true;
+            rbDébito.Location = new Point(6, 30);
+            rbDébito.Name = "rbDébito";
+            rbDébito.Size = new Size(57, 19);
+            rbDébito.TabIndex = 0;
+            rbDébito.TabStop = true;
+            rbDébito.Text = "Hatch";
+            rbDébito.UseVisualStyleBackColor = true;
             // 
             // lbClientes2
             // 
             lbClientes2.AutoSize = true;
             lbClientes2.Font = new Font("Segoe UI Semibold", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbClientes2.ForeColor = Color.White;
-            lbClientes2.Location = new Point(373, 36);
+            lbClientes2.Location = new Point(492, 51);
             lbClientes2.Name = "lbClientes2";
-            lbClientes2.Size = new Size(87, 30);
+            lbClientes2.Size = new Size(200, 30);
             lbClientes2.TabIndex = 43;
-            lbClientes2.Text = "Clientes";
+            lbClientes2.Text = "Cadastro de Cliente";
             lbClientes2.Click += label3_Click;
             // 
-            // ptbClientes2
+            // panel1
             // 
-            ptbClientes2.Image = (Image)resources.GetObject("ptbClientes2.Image");
-            ptbClientes2.Location = new Point(341, 27);
-            ptbClientes2.Name = "ptbClientes2";
-            ptbClientes2.Size = new Size(35, 39);
-            ptbClientes2.TabIndex = 44;
-            ptbClientes2.TabStop = false;
+            panel1.BackColor = SystemColors.ActiveCaptionText;
+            panel1.Controls.Add(pictureBox3);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(btnSair);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(lblTitulo);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(label6);
+            panel1.Controls.Add(pictureBox4);
+            panel1.Controls.Add(pictureBox5);
+            panel1.Location = new Point(1, 2);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(270, 621);
+            panel1.TabIndex = 94;
             // 
-            // ptbFullSound
+            // pictureBox3
             // 
-            ptbFullSound.Image = (Image)resources.GetObject("ptbFullSound.Image");
-            ptbFullSound.Location = new Point(12, 27);
-            ptbFullSound.Name = "ptbFullSound";
-            ptbFullSound.Size = new Size(221, 50);
-            ptbFullSound.TabIndex = 45;
-            ptbFullSound.TabStop = false;
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(28, 106);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(63, 56);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 99;
+            pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 11F);
+            label3.ForeColor = SystemColors.ButtonFace;
+            label3.Location = new Point(97, 550);
+            label3.Name = "label3";
+            label3.Size = new Size(34, 20);
+            label3.TabIndex = 98;
+            label3.Text = "Sair";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(16, 527);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(115, 65);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 97;
+            pictureBox2.TabStop = false;
+            // 
+            // btnSair
+            // 
+            btnSair.BackColor = Color.OrangeRed;
+            btnSair.ForeColor = SystemColors.Control;
+            btnSair.Location = new Point(2347, 603);
+            btnSair.Name = "btnSair";
+            btnSair.Size = new Size(75, 23);
+            btnSair.TabIndex = 94;
+            btnSair.Text = "Sair";
+            btnSair.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.Font = new Font("Segoe UI", 30F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.DarkOrange;
+            label1.Location = new Point(98, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(141, 58);
+            label1.TabIndex = 96;
+            label1.Text = "Sound";
+            // 
+            // lblTitulo
+            // 
+            lblTitulo.Font = new Font("Segoe UI", 30F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTitulo.ForeColor = SystemColors.Window;
+            lblTitulo.Location = new Point(23, 23);
+            lblTitulo.Name = "lblTitulo";
+            lblTitulo.Size = new Size(210, 57);
+            lblTitulo.TabIndex = 95;
+            lblTitulo.Text = "Full";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ButtonFace;
+            label2.Location = new Point(88, 374);
+            label2.Name = "label2";
+            label2.Size = new Size(92, 21);
+            label2.TabIndex = 85;
+            label2.Text = "Orçamento";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = SystemColors.ButtonFace;
+            label4.Location = new Point(88, 284);
+            label4.Name = "label4";
+            label4.Size = new Size(67, 21);
+            label4.TabIndex = 88;
+            label4.Text = "Agenda";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.DarkOrange;
+            label5.Location = new Point(88, 208);
+            label5.Name = "label5";
+            label5.Size = new Size(61, 21);
+            label5.TabIndex = 87;
+            label5.Text = "Cliente";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.ErrorImage = null;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(23, 350);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(63, 57);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 89;
+            pictureBox1.TabStop = false;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.ForeColor = Color.SeaShell;
+            label6.Location = new Point(88, 133);
+            label6.Name = "label6";
+            label6.Size = new Size(55, 21);
+            label6.TabIndex = 86;
+            label6.Text = "Home";
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.ErrorImage = null;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(28, 188);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(67, 48);
+            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox4.TabIndex = 90;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.ErrorImage = null;
+            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
+            pictureBox5.Location = new Point(23, 257);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(72, 66);
+            pictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox5.TabIndex = 91;
+            pictureBox5.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            pictureBox6.ErrorImage = null;
+            pictureBox6.Image = (Image)resources.GetObject("pictureBox6.Image");
+            pictureBox6.Location = new Point(431, 32);
+            pictureBox6.Name = "pictureBox6";
+            pictureBox6.Size = new Size(55, 55);
+            pictureBox6.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox6.TabIndex = 95;
+            pictureBox6.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.DarkOrange;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.Black;
+            button1.Location = new Point(782, 175);
+            button1.Name = "button1";
+            button1.Size = new Size(124, 23);
+            button1.TabIndex = 96;
+            button1.Text = "Adicionar Cliente";
+            button1.UseVisualStyleBackColor = false;
             // 
             // TelaCliente
             // 
@@ -332,42 +367,33 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(975, 662);
-            Controls.Add(ptbFullSound);
-            Controls.Add(ptbClientes2);
+            ClientSize = new Size(1419, 624);
+            Controls.Add(button1);
+            Controls.Add(pictureBox6);
+            Controls.Add(panel1);
             Controls.Add(lbClientes2);
-            Controls.Add(btnAdicionarCliente);
             Controls.Add(gbTipodePagamento);
             Controls.Add(dgvClientes);
-            Controls.Add(ptbHome);
-            Controls.Add(ptbAgenda);
-            Controls.Add(ptbClientes);
-            Controls.Add(ptbOrçamentos);
-            Controls.Add(lbAgenda);
-            Controls.Add(lbClientes);
-            Controls.Add(lbHome);
-            Controls.Add(LbOrçamentos);
-            Controls.Add(txtStatusDoCliente);
-            Controls.Add(txtTipoDeServiço);
             Controls.Add(txtCelular);
             Controls.Add(txtNome);
             Controls.Add(LbTipoDePagamento);
-            Controls.Add(LbStatusDoCliente);
-            Controls.Add(LbTipoDeServiço);
             Controls.Add(LbCelular2);
             Controls.Add(LbNome);
             ForeColor = Color.White;
             Name = "TelaCliente";
             Text = "TelaCliente";
-            ((System.ComponentModel.ISupportInitialize)ptbOrçamentos).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptbClientes).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptbAgenda).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptbHome).EndInit();
+            Load += TelaCliente_Load;
             ((System.ComponentModel.ISupportInitialize)dgvClientes).EndInit();
             gbTipodePagamento.ResumeLayout(false);
             gbTipodePagamento.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)ptbClientes2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)ptbFullSound).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -375,32 +401,33 @@
         #endregion
         private Label LbNome;
         private Label LbCelular2;
-        private Label LbTipoDeServiço;
-        private Label LbStatusDoCliente;
         private Label LbTipoDePagamento;
         private TextBox txtNome;
         private TextBox txtCelular;
-        private TextBox txtTipoDeServiço;
-        private TextBox txtStatusDoCliente;
         private Button button2;
         private Button button3;
         private Button button4;
         private Label lbClientes2;
-        private Label LbOrçamentos;
-        private Label lbHome;
-        private Label lbClientes;
-        private Label lbAgenda;
-        private PictureBox ptbOrçamentos;
-        private PictureBox ptbClientes;
-        private PictureBox ptbAgenda;
-        private PictureBox ptbHome;
         private DataGridView dgvClientes;
         private GroupBox gbTipodePagamento;
         private RadioButton rbDébito;
-        private Button btnAdicionarCliente;
         private RadioButton rbPix;
         private RadioButton rbCrédito;
-        private PictureBox ptbClientes2;
-        private PictureBox ptbFullSound;
+        private Panel panel1;
+        private PictureBox pictureBox3;
+        private Label label3;
+        private PictureBox pictureBox2;
+        private Button btnSair;
+        private Label label1;
+        private Label lblTitulo;
+        private Label label2;
+        private Label label4;
+        private Label label5;
+        private PictureBox pictureBox1;
+        private Label label6;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
+        private PictureBox pictureBox6;
+        private Button button1;
     }
 }
