@@ -38,7 +38,7 @@ namespace Tela1_Acesso
         {
 
         }
-
+        /*
         private void btnAdicionarCliente_Click(object sender, EventArgs e)
         {
 
@@ -68,7 +68,7 @@ namespace Tela1_Acesso
             txtCelular.Clear();
             txtTipoDeServiço.Clear();
 
-        }
+        }*/
         private void label1_Click(object sender, EventArgs e)
         {
 
